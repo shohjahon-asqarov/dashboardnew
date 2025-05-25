@@ -320,3 +320,24 @@ th {
 .filter-controls {
   row-gap: 15px !important;
 }
+
+
+/* select icons */
+#tokenSelect + .nice-select .current::before {
+  background-image: url("../images/solana-icon.svg");
+  @apply inline-block w-4 h-4 mr-2 align-middle bg-no-repeat bg-contain;
+  content: "";
+}
+
+#filterSelect + .nice-select .current::before,
+#dexesSelect + .nice-select .current::before {
+  background-image: url("../images/filter.svg");
+  @apply inline-block w-4 h-4 mr-2 align-middle bg-no-repeat bg-contain;
+  content: "";
+}
+
+#walletSelect + .nice-select .current::before {
+  background-image: url("../images/wallet.svg");
+  @apply inline-block w-4 h-4 mr-2 align-middle bg-no-repeat bg-contain;
+  content: "";
+}
