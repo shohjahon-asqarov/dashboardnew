@@ -267,7 +267,106 @@
                 <th class="text-center">ACTIONS</th>
               </tr>
             </thead>
-            <tbody id="crypto-table-body"></tbody>
+            <tbody id="crypto-table-body">
+
+              <!-- we used javascript function named is renderTable(268 line in main.js) to render data , but you can use commented code below -->
+              <!-- <tr class="table-row-interactive">
+                <td class="table-cell-base sticky left-0 bg-background ">
+                  <div class="pair-info">
+                    <img src="/images/user.png" alt="$ITRUMP" class="pair-icon">
+                    <div>
+                      <div class="pair-name">$ITRUMP <span class="text-header-text">/ SOL</span></div>
+                      <div class="pair-hash">HasM...JibH <i class="bi bi-clipboard ml-1"></i></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="table-cell-base">
+                  <div class="timestamp-info">
+                    <i class="bi bi-clock timestamp-icon"></i>
+                    <span>4s</span>
+                  </div>
+                </td>
+
+                <td class="table-cell-base">
+                  <div class="liquidity-info">
+                    <div class="liquidity-row">
+                      <img src="../images/table-logo.svg">
+                      <div class="liquidity-amount">
+                        <span>412.22334</span> /
+                        <span class="liquidity-usd">$72K</span>
+                      </div>
+                    </div>
+                    <div class="text-xs text-success">+50%</div>
+                  </div>
+                </td>
+
+                <td class="table-cell-base">
+                  <div class="market-info">
+                    <div>$48.03K</div>
+                    <div class="market-subtext">$0.0448</div>
+                  </div>
+                </td>
+
+                <td class="table-cell-base">
+                  <div class="txn-info">
+                    <div class="txn-count">1</div>
+                    <div class="txn-details">
+                      <span class="text-success">1</span>
+                      <span>/</span>
+                      <span class="text-warning">0</span>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="table-cell-base">
+                  <div class="volume-info">$12.2K</div>
+                </td>
+
+                <td class="table-cell-compact audit-cell !border-none">
+
+                  <div class="audit-content">
+                    <i class="bi bi-check-circle audit-icon"></i>
+                    <div class="audit-text hidden md:block">Mint Auth<br>Disabled</div>
+                  </div>
+
+                </td>
+                <td class="table-cell-compact audit-cell !border-none">
+
+                  <div class="audit-content">
+                    <i class="bi bi-check-circle audit-icon"></i>
+                    <div class="audit-text hidden md:block">Freeze Auth<br>Disabled</div>
+                  </div>
+
+                </td>
+                <td class="table-cell-compact audit-cell !border-none">
+
+                  <div class="audit-content">
+                    <i class="bi bi-check-circle audit-icon"></i>
+                    <div class="audit-text hidden md:block">LP<br>Burned</div>
+                  </div>
+
+                </td>
+                <td class="table-cell-compact audit-cell">
+
+                  <div class="audit-content">
+                    <i class="bi bi-check-circle audit-icon"></i>
+                    <div class="audit-text hidden md:block">Top 10<br>Holders</div>
+                  </div>
+
+                </td>
+
+                <td class="table-cell-base">
+                  <button onclick="openBuyModal()" class="btn-buy" fdprocessedid="0cb1hk">
+                    <span class="hidden md:inline-block">BUY <i class="bi bi-arrow-right ml-2"></i></span>
+                    <i class="bi bi-lightning-charge-fill inline-block md:hidden"></i>
+                  </button>
+                </td>
+              </tr> -->
+
+
+
+            </tbody>
           </table>
         </div>
       </div>
@@ -276,45 +375,55 @@
 
 
   <div id="buyModal" class="buyModal hidden fixed inset-0 justify-center items-center !backdrop-blur-md">
-    <div class="w-11/12 md:w-auto">
-      <div class="border border-input-border p-3 md:p-5 rounded-2xl bg-surface">
+    <form class="w-11/12 md:w-auto">
+      <div class="border border-[#31343F] p-5 md:p-6 pb-4 rounded-3xl bg-[#161022] md:max-w-[480px]">
 
-        <div class="flex items-center justify-between">
-          <p class='font-semibold'>Buy SOL</p>
+        <div class="flex items-center justify-between pt-1">
+          <p class='font-semibold text-2xl'>Buy SOL</p>
 
-          <button id="buyModal-close">
-            <i class="bi bi-x text-xl"></i>
+          <button type="button" id="buyModal-close">
+            <i class="bi bi-x text-3xl"></i>
           </button>
         </div>
 
-        <div class="space-y-3 mt-4 border border-input-border rounded-lg overflow-hidden">
-          <div class="flex items-center space-x-5 px-3 py-2.5">
-            <div class="flex items-center space-x-1">
-              <img src="./images/solana-icon.svg" alt="solana">
+        <div class="space-y-3 mt-4 border border-[#31343F] rounded-[13px] overflow-hidden">
+          <div class="flex  items-center space-x-5 px-3 pt-2.5">
+            <div class="flex items-center space-x-1 text-2xl">
+              <img class="w-[34px] flex-[0_0_34px] " src="./images/solana-icon.svg" alt="solana">
               <span>SOL</span>
             </div>
-            <input id="sol-value-input" value="0.5"
-              class="border border-input-border rounded-lg py-1 px-3 flex-grow !min-w-20" type="text">
-            <button class="bg-dark-2 p-2 rounded-lg !rotate-90">
-              <i class="bi bi-arrow-down-up"></i>
+            <input required value="0.1" id="sol-value-input" placeholder="typing..."
+              class="rounded-lg py-1 px-3 text-2xl !flex-grow !min-w-0 !max-w-auto" type="text">
+            <button type="button" class="bg-dark-2 p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24">
+                <g clipPath="url(#a)">
+                  <path fill="#fff"
+                    d="M20 14a1 1 0 0 1 .117 1.993L20 16H6.414l2.293 2.293a1 1 0 0 1-1.32 1.497l-.094-.083-3.83-3.83c-.665-.664-.239-1.783.663-1.871L4.241 14h15.76Zm-4.707-9.707a1 1 0 0 1 1.32-.083l.094.083 3.83 3.83c.665.664.24 1.783-.663 1.871L19.76 10H4a1 1 0 0 1-.117-1.993L4 8h13.586l-2.293-2.293a1 1 0 0 1 0-1.414Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h24v24H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </button>
           </div>
 
-          <div class="preset-container !p-0 ">
+          <div class="preset-container !p-0 border-t border-[#31343F]">
             <div class="preset-group sol-values w-full justify-between px-3">
-              <button class="preset-btn-active">0.1</button>
-              <button class="preset-btn">0.25</button>
-              <button class="preset-btn">0.5</button>
-              <button class="preset-btn">1</button>
-              <button class="preset-btn">2</button>
-              <button class="preset-btn">5</button>
+              <button type="button" class="preset-btn preset-btn-active">0.1</button>
+              <button type="button" class="preset-btn">0.25</button>
+              <button type="button" class="preset-btn">0.5</button>
+              <button type="button" class="preset-btn">1</button>
+              <button type="button" class="preset-btn">2</button>
+              <button type="button" class="preset-btn">5</button>
             </div>
           </div>
         </div>
 
-        <button class="btn-primary w-full mt-5">Connect Wallet</button>
+        <button class="btn-primary w-full mt-5 text-xl font-semibold">BUY <i class="bi bi-arrow-right"></i></button>
 
-        <div class="text-xs text-center space-y-1 pt-3">
+        <div class="text-base text-center space-y-1 pt-6">
           <p>
             you receive min.
             <span class="font-semibold text-white">35,169</span> Time
@@ -331,7 +440,7 @@
         </div>
 
       </div>
-    </div>
+    </form>
   </div>
 
 

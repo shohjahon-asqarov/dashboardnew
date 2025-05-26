@@ -939,10 +939,16 @@ video {
 .btn-primary {
   min-width: 6rem;
   flex-grow: 1;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
-  padding: 0.625rem;
+  padding: 0.75rem;
+  transition-duration: 300ms;
+}
+
+.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(93 19 218 / var(--tw-bg-opacity, 1));
 }
 
 @media (min-width: 1000px) {
@@ -1071,6 +1077,10 @@ video {
   width: 91.666667%;
 }
 
+.w-\[34px\] {
+  width: 34px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -1079,8 +1089,8 @@ video {
   width: 100%;
 }
 
-.\!min-w-20 {
-  min-width: 5rem !important;
+.\!min-w-0 {
+  min-width: 0px !important;
 }
 
 .min-w-16 {
@@ -1090,6 +1100,14 @@ video {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.flex-\[0_0_34px\] {
+  flex: 0 0 34px;
+}
+
+.\!flex-grow {
+  flex-grow: 1 !important;
 }
 
 .flex-grow {
@@ -1109,11 +1127,6 @@ video {
 .-translate-y-full {
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.\!rotate-90 {
-  --tw-rotate: 90deg !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .cursor-pointer {
@@ -1229,8 +1242,12 @@ video {
   border-radius: 9999px !important;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-\[13px\] {
+  border-radius: 13px;
 }
 
 .rounded-full {
@@ -1249,12 +1266,21 @@ video {
   border-width: 2px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
 
 .\!border-none {
   border-style: none !important;
+}
+
+.border-\[\#31343F\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(49 52 63 / var(--tw-border-opacity, 1));
 }
 
 .border-gray-700 {
@@ -1264,6 +1290,11 @@ video {
 
 .border-input-border {
   border-color: #494E5B80;
+}
+
+.bg-\[\#161022\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 16 34 / var(--tw-bg-opacity, 1));
 }
 
 .bg-background {
@@ -1290,11 +1321,6 @@ video {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
 }
 
-.bg-surface {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 47 / var(--tw-bg-opacity, 1));
-}
-
 .\!p-0 {
   padding: 0px !important;
 }
@@ -1305,10 +1331,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .\!px-5 {
@@ -1351,11 +1373,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1371,12 +1388,24 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-2\.5 {
+  padding-top: 0.625rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-left {
@@ -1390,6 +1419,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-base {
@@ -1746,24 +1780,42 @@ th {
 }
 
 .sol-values {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   border-radius: 0px;
-  padding: 0.5rem !important;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .sol-values button {
   display: flex;
-  width: 3rem;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(49 52 63 / var(--tw-bg-opacity, 1)) !important;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600 !important;
+}
+
+@media (min-width: 1024px) {
+  .sol-values button {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
 }
 
 .sol-values button.preset-btn-active {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.modal-wrapper {
+  max-width: 480px !important;
+  background-color: red !important;
 }
 
 .after\:absolute::after {
@@ -1870,8 +1922,12 @@ th {
     width: auto;
   }
 
-  .md\:p-5 {
-    padding: 1.25rem;
+  .md\:max-w-\[480px\] {
+    max-width: 480px;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
   }
 }
 

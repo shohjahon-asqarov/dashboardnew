@@ -193,7 +193,7 @@
   }
 
   .btn-primary {
-    @apply bg-primary min-w-24 1000:min-w-[140px] p-2.5 rounded-lg flex-grow 1000:flex-grow-0;
+    @apply bg-primary min-w-24 1000:min-w-[140px] p-3 rounded-xl flex-grow 1000:flex-grow-0 hover:bg-[#5D13DA] duration-300;
   }
 
   /**
@@ -346,13 +346,18 @@ th {
 }
 
 .sol-values {
-  @apply !p-2 text-base rounded-none;
+  @apply grid grid-cols-6 py-2 rounded-none;
 }
 
 .sol-values button {
-  @apply w-12 flex justify-center items-center py-1;
+  @apply flex justify-center items-center py-1.5 !bg-[#31343F] text-base lg:!text-xl !font-semibold flex-grow;
 }
 
 .sol-values button.preset-btn-active {
   @apply !bg-primary;
+}
+
+.modal-wrapper {
+  max-width: 480px !important;
+  background-color: red !important;
 }

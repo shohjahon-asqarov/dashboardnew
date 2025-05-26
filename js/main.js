@@ -40,6 +40,11 @@ buttons.forEach((btn) => {
 });
 
 
+input.addEventListener('keyup', () => {
+    buttons.forEach(b => b.classList.remove('preset-btn-active'));
+})
+
+
 
 // mobile search open
 mbOpenBtn.addEventListener('click', () => {
