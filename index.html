@@ -276,59 +276,61 @@
 
 
   <div id="buyModal" class="buyModal hidden fixed inset-0 justify-center items-center !backdrop-blur-md">
-    <div class="border border-input-border p-5 rounded-2xl bg-surface">
+    <div class="w-11/12 md:w-auto">
+      <div class="border border-input-border p-3 md:p-5 rounded-2xl bg-surface">
 
-      <div class="flex items-center justify-between">
-        <p class='font-semibold'>Buy SOL</p>
+        <div class="flex items-center justify-between">
+          <p class='font-semibold'>Buy SOL</p>
 
-        <button id="buyModal-close">
-          <i class="bi bi-x text-xl"></i>
-        </button>
-      </div>
-
-      <div class="space-y-3 mt-4 border border-input-border rounded-lg overflow-hidden">
-        <div class="flex items-center space-x-5 px-3 py-2.5">
-          <div class="flex items-center space-x-1">
-            <img src="./images/solana-icon.svg" alt="solana">
-            <span>SOL</span>
-          </div>
-          <input id="sol-value-input" value="0.5"
-            class="border border-input-border rounded-lg py-1 px-3 flex-grow !min-w-20" type="text">
-          <button class="bg-dark-2 p-2 rounded-lg !rotate-90">
-            <i class="bi bi-arrow-down-up"></i>
+          <button id="buyModal-close">
+            <i class="bi bi-x text-xl"></i>
           </button>
         </div>
 
-        <div class="preset-container !p-0 ">
-          <div class="preset-group sol-values w-full justify-between px-3">
-            <button class="preset-btn-active">0.1</button>
-            <button class="preset-btn">0.25</button>
-            <button class="preset-btn">0.5</button>
-            <button class="preset-btn">1</button>
-            <button class="preset-btn">2</button>
-            <button class="preset-btn">5</button>
+        <div class="space-y-3 mt-4 border border-input-border rounded-lg overflow-hidden">
+          <div class="flex items-center space-x-5 px-3 py-2.5">
+            <div class="flex items-center space-x-1">
+              <img src="./images/solana-icon.svg" alt="solana">
+              <span>SOL</span>
+            </div>
+            <input id="sol-value-input" value="0.5"
+              class="border border-input-border rounded-lg py-1 px-3 flex-grow !min-w-20" type="text">
+            <button class="bg-dark-2 p-2 rounded-lg !rotate-90">
+              <i class="bi bi-arrow-down-up"></i>
+            </button>
+          </div>
+
+          <div class="preset-container !p-0 ">
+            <div class="preset-group sol-values w-full justify-between px-3">
+              <button class="preset-btn-active">0.1</button>
+              <button class="preset-btn">0.25</button>
+              <button class="preset-btn">0.5</button>
+              <button class="preset-btn">1</button>
+              <button class="preset-btn">2</button>
+              <button class="preset-btn">5</button>
+            </div>
           </div>
         </div>
+
+        <button class="btn-primary w-full mt-5">Connect Wallet</button>
+
+        <div class="text-xs text-center space-y-1 pt-3">
+          <p>
+            you receive min.
+            <span class="font-semibold text-white">35,169</span> Time
+            <span class="text-gray-400">(~$77)</span>
+          </p>
+          <p class="text-gray-400">platform fee:
+            <span class="text-white">0.5%</span>
+          </p>
+          <p class="text-gray-400 flex items-center gap-1 justify-center">
+            priority fee:
+            <span class="text-white">0.002 SOL</span>
+            <i class="bi bi-shield-shaded"></i>
+          </p>
+        </div>
+
       </div>
-
-      <button class="btn-primary w-full mt-5">Connect Wallet</button>
-
-      <div class="text-xs text-center space-y-1 pt-3">
-        <p>
-          you receive min.
-          <span class="font-semibold text-white">35,169</span> Time
-          <span class="text-gray-400">(~$77)</span>
-        </p>
-        <p class="text-gray-400">platform fee:
-          <span class="text-white">0.5%</span>
-        </p>
-        <p class="text-gray-400 flex items-center gap-1 justify-center">
-          priority fee:
-          <span class="text-white">0.002 SOL</span>
-          <i class="bi bi-shield-shaded"></i>
-        </p>
-      </div>
-
     </div>
   </div>
 

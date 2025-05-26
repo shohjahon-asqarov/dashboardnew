@@ -1067,12 +1067,20 @@ video {
   width: 2.75rem;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
+}
+
+.\!min-w-20 {
+  min-width: 5rem !important;
 }
 
 .min-w-16 {
@@ -1082,10 +1090,6 @@ video {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
-}
-
-.\!min-w-20 {
-  min-width: 5rem !important;
 }
 
 .flex-grow {
@@ -1303,8 +1307,8 @@ video {
   padding: 1.25rem;
 }
 
-.\!p-5 {
-  padding: 1.25rem !important;
+.p-3 {
+  padding: 0.75rem;
 }
 
 .\!px-5 {
@@ -1347,6 +1351,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1360,11 +1369,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
 }
 
 .pb-6 {
@@ -1757,6 +1761,11 @@ th {
   padding-bottom: 0.25rem;
 }
 
+.sol-values button.preset-btn-active {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1)) !important;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -1855,6 +1864,14 @@ th {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 }
 

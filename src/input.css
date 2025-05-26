@@ -352,3 +352,7 @@ th {
 .sol-values button {
   @apply w-12 flex justify-center items-center py-1;
 }
+
+.sol-values button.preset-btn-active {
+  @apply !bg-primary;
+}
