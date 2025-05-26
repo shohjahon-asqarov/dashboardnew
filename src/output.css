@@ -1017,6 +1017,11 @@ video {
   z-index: 40;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -1406,6 +1411,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .text-left {
