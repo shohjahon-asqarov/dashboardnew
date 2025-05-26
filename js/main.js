@@ -9,6 +9,38 @@ const mbSearch = document.getElementById('mb-search');
 const mbOpenBtn = document.getElementById('mb-open');
 const mbCloseBtn = document.getElementById('mb-close');
 
+
+// buy modal functions
+const buttons = document.querySelectorAll('.sol-values button');
+const input = document.getElementById('sol-value-input');
+const buyModalCloseBtn = document.getElementById('buyModal-close');
+const buyModal = document.getElementById('buyModal')
+
+buyModalCloseBtn.addEventListener('click', () => {
+    buyModal.classList.add('hidden')
+    buyModal.classList.remove('flex')
+})
+
+function openBuyModal() {
+    buyModal.classList.remove('hidden')
+    buyModal.classList.add('flex')
+}
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        // Input qiymatini o'zgartirish
+        input.value = btn.textContent;
+
+        // Barcha buttonlardan active classni olib tashlash
+        buttons.forEach(b => b.classList.remove('preset-btn-active'));
+
+        // Bosilgan buttonga active classni qo‘shish
+        btn.classList.add('preset-btn-active');
+    });
+});
+
+
+
 // mobile search open
 mbOpenBtn.addEventListener('click', () => {
     mbSearch.classList.remove('-translate-y-full')
@@ -310,7 +342,7 @@ function renderTable() {
             
             <!-- Actions Column -->
             <td class="table-cell-base">
-                <button class="btn-buy">
+                <button onclick='openBuyModal()' class="btn-buy">
                     <span class="hidden md:inline-block">BUY <i class="bi bi-arrow-right ml-2"></i></span>
                     <i class="bi bi-lightning-charge-fill inline-block md:hidden"></i>
                 </button>

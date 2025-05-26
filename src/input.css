@@ -192,6 +192,10 @@
     @apply bg-transparent hover:bg-primary border-2 border-input-border duration-300 hover:border-primary text-white font-bold text-sm md:py-2 md:px-6 py-1 px-4 rounded-xl flex items-center justify-center;
   }
 
+  .btn-primary {
+    @apply bg-primary border-2 border-input-border duration-300 hover:border-primary text-white font-bold text-sm md:py-2 md:px-6 py-1 px-4 rounded-xl flex items-center justify-center;
+  }
+
   /**
    * Select Components
    * ---------------
@@ -321,7 +325,6 @@ th {
   row-gap: 15px !important;
 }
 
-
 /* select icons */
 #tokenSelect + .nice-select .current::before {
   background-image: url("../images/solana-icon.svg");
@@ -340,4 +343,8 @@ th {
   background-image: url("../images/wallet.svg");
   @apply inline-block w-4 h-4 mr-2 align-middle bg-no-repeat bg-contain;
   content: "";
+}
+
+.sol-values button {
+  @apply !flex-grow !px-0;
 }
