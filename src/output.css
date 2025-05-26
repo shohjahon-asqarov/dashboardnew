@@ -1111,6 +1111,22 @@ video {
   flex: 0 0 34px;
 }
 
+.flex-\[0_0_14px\] {
+  flex: 0 0 14px;
+}
+
+.flex-\[0_0_100px\] {
+  flex: 0 0 100px;
+}
+
+.flex-\[0_0_px\] {
+  flex: 0 0 px;
+}
+
+.flex-\[0_0_84px\] {
+  flex: 0 0 84px;
+}
+
 .\!flex-grow {
   flex-grow: 1 !important;
 }
